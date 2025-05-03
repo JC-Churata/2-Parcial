@@ -1,0 +1,73 @@
+/* Contenedor principal */
+.status-tag {
+    background-color: var(--tag-color, #E53935); /* Color dinámico */
+    padding: 10px 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Círculo con número */
+  .status-number {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  /* Título */
+  .status-title {
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Código e ícono */
+  .status-code-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .status-code {
+    font-size: 12px;
+    opacity: 0.9;
+  }
+  
+  /* Ícono con efecto de corte */
+  .status-icon {
+    position: relative;
+    font-size: 28px;
+    opacity: 0.8;
+    line-height: 0.7;
+  }
+  
+  .status-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom right, 
+      transparent 42%, 
+      var(--tag-color) 45%, 
+      var(--tag-color) 55%, 
+      transparent 58%
+    );
+    pointer-events: none;
+  }
