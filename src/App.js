@@ -28,9 +28,16 @@ function App() {
           <div style={{ padding: "12px", fontSize: "13px", lineHeight: "1.4" }}>
             <p>Description of what is done here</p>
           </div>
-          <CardFooter date="3/8/2020" />
+          <CardFooter 
+            assignee={{ 
+              avatar: "https://i.pravatar.cc/40?img=3", 
+              name: "Carlos Pérez" 
+            }} 
+            points={5} 
+          />
         </div>
       </div>
+
       <div>
         <div style={{ 
           fontSize: "12px", 
@@ -48,30 +55,15 @@ function App() {
           <div style={{ padding: "12px", fontSize: "13px", lineHeight: "1.4" }}>
             <p>Description of what is done here</p>
           </div>
-          <CardFooter date="3/8/2020" />
-        </div>
-      </div>
-      <div>
-        <div style={{ 
-          fontSize: "12px", 
-          color: "#9C27B0", 
-          marginBottom: "4px",
-          fontWeight: "bold"
-        }}># helper/note/completed</div>
-        <div style={{ border: "1px solid #ddd", borderRadius: "8px" }}>
-          <StatusTag 
-            color="#9E9E9E" 
-            number="1" 
-            title="Agenda/Topic" 
-            code="SAAS-0000" 
+          <CardFooter 
+            assignee={{ 
+              avatar: "https://i.pravatar.cc/40?img=5", 
+              name: "María García" 
+            }} 
+            points={3} 
           />
-          <div style={{ padding: "12px", fontSize: "13px", lineHeight: "1.4" }}>
-            <p>Description of what is done here</p>
-          </div>
-          <CardFooter date="3/8/2020" />
         </div>
       </div>
-
     </div>
   );
 }
