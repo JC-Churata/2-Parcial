@@ -1,7 +1,8 @@
 import React from 'react';
-import TaskBoard from './components/Organisms/TaskBoard';
+import JiraBoardTemplate from './templates/JiraBoardTemplate';
 
 function App() {
+  // Datos de ejemplo (mover a un archivo externo si es necesario)
   const columns = [
     {
       id: 1,
@@ -11,13 +12,10 @@ function App() {
           id: 101,
           type: "Tarea",
           typeColor: "#61bd4f",
-          title: "Implementar moléculas",
-          description: "Crear componentes StatusTag y CardFooter",
-          assignee: { 
-            avatar: "https://i.pravatar.cc/40?img=3", 
-            name: "Carlos" 
-          },
-          storyPoints: 5
+          title: "Implementar templates",
+          description: "Crear JiraBoardTemplate",
+          assignee: { avatar: "https://i.pravatar.cc/40?img=3", name: "Carlos" },
+          storyPoints: 3
         }
       ]
     },
@@ -30,18 +28,15 @@ function App() {
           type: "Error",
           typeColor: "#eb5a46",
           title: "Corregir estilos",
-          description: "Ajustar padding en CardFooter",
-          assignee: { 
-            avatar: "https://i.pravatar.cc/40?img=5", 
-            name: "María" 
-          },
-          storyPoints: 3
+          description: "Ajustar padding en StatusTag",
+          assignee: { avatar: "https://i.pravatar.cc/40?img=5", name: "María" },
+          storyPoints: 5
         }
       ]
     }
   ];
 
-  return <TaskBoard columns={columns} />;
+  return <JiraBoardTemplate columns={columns} />;
 }
 
 export default App;
